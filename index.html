@@ -1,0 +1,1121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      .home-banner {
+        background-image: url("https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/business-hero.jpeg");
+        min-height: 650px;
+        background-size: cover;
+        background-position: center;
+        margin-bottom: 5rem;
+      }
+
+      .home-banner .container .row {
+        min-height: 600px;
+      }
+
+      .switch {
+        position: relative;
+        display: inline-block;
+        width: 50px;
+        height: 24px;
+      }
+
+      .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 16px;
+        width: 16px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      input:checked + .slider {
+        background-color: #2196f3;
+      }
+
+      input:focus + .slider {
+        box-shadow: 0 0 1px #2196f3;
+      }
+
+      input:checked + .slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+      }
+
+      /* Rounded sliders */
+      .slider.round {
+        border-radius: 34px;
+      }
+
+      .slider.round:before {
+        border-radius: 50%;
+      }
+
+      .footer-bg {
+        background-color: #3a3a3a;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top">
+      <div class="container py-2">
+        <a class="navbar-brand fw-bold text-uppercase" href="#">
+          <img
+            height="30"
+            src="https://www.onlynx.co.th/wp-content/uploads/2020/03/cropped-logo-Onlynx-tech2.png"
+            alt="Onlynx"
+          />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto gap-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Pages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container-fluid home-banner">
+      <div class="container">
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12 col-md-6">
+            <div class="mb-5">
+              <h1 class="display-3 fw-semibold mb-4">
+                Designing your <br />
+                next business.
+              </h1>
+              <p class="text-black-50">
+                Small business, big opportunity? We help our clients exploit
+                technology to strategically reshape their business around
+                digital economy.
+              </p>
+            </div>
+            <button class="btn btn-primary px-5 py-3 me-4 mb-4">Discover Now</button>
+            <button class="btn btn-outline-primary px-5 py-3">
+              How it Works
+            </button>
+          </div>
+          <div class="col-12 col-md-6"></div>
+        </div>
+      </div>
+    </div>
+    <div class="container mb-md-5 pb-md-5">
+      <div class="row justify-content-center mb-4">
+        <div class="col-12 col-md-9">
+          <h1 class="mb-3 mb-md-5 display-5 text-center fw-semibold">
+            Make your business future-proof <br />
+            to anticipate the challenges to be
+          </h1>
+        </div>
+      </div>
+      <div class="row mb-3 py-3 mb-md-5 py-md-5">
+        <div class="col-12 col-md-4">
+          <div>
+            <div class="mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="61"
+                viewBox="0 0 60 61"
+                fill="none"
+              >
+                <path
+                  d="M39.999 17.0017C39.999 10.8767 33.277 2.00171 29.999 2.00171C26.721 2.00171 19.999 10.8767 19.999 17.0017V39.0017H39.999V17.0017Z"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M19.9989 39.0017V42.0017C19.9989 42.5537 19.5509 43.0017 18.9989 43.0017H12.9989C12.4349 43.0017 11.9849 42.5387 11.9999 41.9757C12.1369 36.6067 13.4419 29.0167 19.9989 27.4547"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M39.999 39.0017V42.0017C39.999 42.5537 40.447 43.0017 40.999 43.0017H46.999C47.563 43.0017 48.013 42.5387 47.998 41.9757C47.861 36.6067 46.557 29.0157 39.999 27.4547"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M29.999 44.0017V54.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M34.999 42.0017V46.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M24.999 42.0017V46.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M24.999 48.0017V50.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M50.999 1.00171V6.00171"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M50.999 10.0017V15.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M57.999 8.00171H52.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M48.999 8.00171H43.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M12.499 4.50171V3.50171H13.499V4.50171H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 8.50171V7.50171H13.499V8.50171H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 12.5017V11.5017H13.499V12.5017H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 16.5017V15.5017H13.499V16.5017H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 20.5017V19.5017H13.499V20.5017H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 36.5017V35.5017H55.499V36.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 40.5017V39.5017H55.499V40.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M47.499 22.5017V21.5017H48.499V22.5017H47.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M47.499 26.5017V25.5017H48.499V26.5017H47.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 44.5017V43.5017H55.499V44.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 48.5017V47.5017H55.499V48.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M7.49902 33.5017V32.5017H8.49902V33.5017H7.49902Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M7.49902 37.5017V36.5017H8.49902V37.5017H7.49902Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M29.499 10.5017V9.50171H30.499V10.5017H29.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M29.499 14.5017V13.5017H30.499V14.5017H29.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M29.999 30.0017C33.3127 30.0017 35.999 27.3154 35.999 24.0017C35.999 20.688 33.3127 18.0017 29.999 18.0017C26.6853 18.0017 23.999 20.688 23.999 24.0017C23.999 27.3154 26.6853 30.0017 29.999 30.0017Z"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M19.999 58.0017H21.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M23.999 58.0017H25.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M16.342 54.5957C15.267 52.9787 13.086 52.0017 10.999 52.0017C7.68502 52.0017 4.99902 54.6877 4.99902 58.0017H17.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M11.6938 52.0377C11.6938 49.2767 14.2378 47.0017 16.9988 47.0017C18.4578 47.0017 19.7698 47.6267 20.6838 48.6227"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M40.53 53.6067C41.961 51.4347 44.204 50.0017 46.999 50.0017C51.417 50.0017 54.999 53.5837 54.999 58.0017H27.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M37.1641 48.0707C37.4361 48.0257 37.7151 48.0017 37.9991 48.0017C40.1481 48.0017 42.0261 49.4167 42.7331 51.3197"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+              </svg>
+            </div>
+            <h5 class="mb-2">Design-led digital trasformation</h5>
+            <p class="text-black-50">
+              We combine business opportunities with customer expectations to
+              design, transform and deliver useful products, and unique brand
+              experiences.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div>
+            <div class="mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="61"
+                viewBox="0 0 60 61"
+                fill="none"
+              >
+                <path
+                  d="M39.999 17.0017C39.999 10.8767 33.277 2.00171 29.999 2.00171C26.721 2.00171 19.999 10.8767 19.999 17.0017V39.0017H39.999V17.0017Z"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M19.9989 39.0017V42.0017C19.9989 42.5537 19.5509 43.0017 18.9989 43.0017H12.9989C12.4349 43.0017 11.9849 42.5387 11.9999 41.9757C12.1369 36.6067 13.4419 29.0167 19.9989 27.4547"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M39.999 39.0017V42.0017C39.999 42.5537 40.447 43.0017 40.999 43.0017H46.999C47.563 43.0017 48.013 42.5387 47.998 41.9757C47.861 36.6067 46.557 29.0157 39.999 27.4547"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M29.999 44.0017V54.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M34.999 42.0017V46.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M24.999 42.0017V46.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M24.999 48.0017V50.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M50.999 1.00171V6.00171"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M50.999 10.0017V15.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M57.999 8.00171H52.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M48.999 8.00171H43.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M12.499 4.50171V3.50171H13.499V4.50171H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 8.50171V7.50171H13.499V8.50171H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 12.5017V11.5017H13.499V12.5017H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 16.5017V15.5017H13.499V16.5017H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 20.5017V19.5017H13.499V20.5017H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 36.5017V35.5017H55.499V36.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 40.5017V39.5017H55.499V40.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M47.499 22.5017V21.5017H48.499V22.5017H47.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M47.499 26.5017V25.5017H48.499V26.5017H47.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 44.5017V43.5017H55.499V44.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 48.5017V47.5017H55.499V48.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M7.49902 33.5017V32.5017H8.49902V33.5017H7.49902Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M7.49902 37.5017V36.5017H8.49902V37.5017H7.49902Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M29.499 10.5017V9.50171H30.499V10.5017H29.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M29.499 14.5017V13.5017H30.499V14.5017H29.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M29.999 30.0017C33.3127 30.0017 35.999 27.3154 35.999 24.0017C35.999 20.688 33.3127 18.0017 29.999 18.0017C26.6853 18.0017 23.999 20.688 23.999 24.0017C23.999 27.3154 26.6853 30.0017 29.999 30.0017Z"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M19.999 58.0017H21.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M23.999 58.0017H25.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M16.342 54.5957C15.267 52.9787 13.086 52.0017 10.999 52.0017C7.68502 52.0017 4.99902 54.6877 4.99902 58.0017H17.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M11.6938 52.0377C11.6938 49.2767 14.2378 47.0017 16.9988 47.0017C18.4578 47.0017 19.7698 47.6267 20.6838 48.6227"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M40.53 53.6067C41.961 51.4347 44.204 50.0017 46.999 50.0017C51.417 50.0017 54.999 53.5837 54.999 58.0017H27.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M37.1641 48.0707C37.4361 48.0257 37.7151 48.0017 37.9991 48.0017C40.1481 48.0017 42.0261 49.4167 42.7331 51.3197"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+              </svg>
+            </div>
+            <h5 class="mb-2">Tansition to sustainable futures</h5>
+            <p class="text-black-50">
+              We combine business opportunities with customer expectations to
+              design, transform and deliver useful products, and unique brand
+              experiences.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div>
+            <div class="mb-3">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="60"
+                height="61"
+                viewBox="0 0 60 61"
+                fill="none"
+              >
+                <path
+                  d="M39.999 17.0017C39.999 10.8767 33.277 2.00171 29.999 2.00171C26.721 2.00171 19.999 10.8767 19.999 17.0017V39.0017H39.999V17.0017Z"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M19.9989 39.0017V42.0017C19.9989 42.5537 19.5509 43.0017 18.9989 43.0017H12.9989C12.4349 43.0017 11.9849 42.5387 11.9999 41.9757C12.1369 36.6067 13.4419 29.0167 19.9989 27.4547"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M39.999 39.0017V42.0017C39.999 42.5537 40.447 43.0017 40.999 43.0017H46.999C47.563 43.0017 48.013 42.5387 47.998 41.9757C47.861 36.6067 46.557 29.0157 39.999 27.4547"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M29.999 44.0017V54.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M34.999 42.0017V46.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M24.999 42.0017V46.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M24.999 48.0017V50.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M50.999 1.00171V6.00171"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M50.999 10.0017V15.0017"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M57.999 8.00171H52.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M48.999 8.00171H43.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M12.499 4.50171V3.50171H13.499V4.50171H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 8.50171V7.50171H13.499V8.50171H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 12.5017V11.5017H13.499V12.5017H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 16.5017V15.5017H13.499V16.5017H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M12.499 20.5017V19.5017H13.499V20.5017H12.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 36.5017V35.5017H55.499V36.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 40.5017V39.5017H55.499V40.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M47.499 22.5017V21.5017H48.499V22.5017H47.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M47.499 26.5017V25.5017H48.499V26.5017H47.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 44.5017V43.5017H55.499V44.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M54.499 48.5017V47.5017H55.499V48.5017H54.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M7.49902 33.5017V32.5017H8.49902V33.5017H7.49902Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M7.49902 37.5017V36.5017H8.49902V37.5017H7.49902Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M29.499 10.5017V9.50171H30.499V10.5017H29.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M29.499 14.5017V13.5017H30.499V14.5017H29.499Z"
+                  stroke="#4C6FFF"
+                ></path>
+                <path
+                  d="M29.999 30.0017C33.3127 30.0017 35.999 27.3154 35.999 24.0017C35.999 20.688 33.3127 18.0017 29.999 18.0017C26.6853 18.0017 23.999 20.688 23.999 24.0017C23.999 27.3154 26.6853 30.0017 29.999 30.0017Z"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M19.999 58.0017H21.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M23.999 58.0017H25.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M16.342 54.5957C15.267 52.9787 13.086 52.0017 10.999 52.0017C7.68502 52.0017 4.99902 54.6877 4.99902 58.0017H17.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M11.6938 52.0377C11.6938 49.2767 14.2378 47.0017 16.9988 47.0017C18.4578 47.0017 19.7698 47.6267 20.6838 48.6227"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M40.53 53.6067C41.961 51.4347 44.204 50.0017 46.999 50.0017C51.417 50.0017 54.999 53.5837 54.999 58.0017H27.999"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+                <path
+                  d="M37.1641 48.0707C37.4361 48.0257 37.7151 48.0017 37.9991 48.0017C40.1481 48.0017 42.0261 49.4167 42.7331 51.3197"
+                  stroke="#4C6FFF"
+                  stroke-width="2"
+                  stroke-miterlimit="10"
+                ></path>
+              </svg>
+            </div>
+            <h5 class="mb-2">We empower our partners</h5>
+            <p class="text-black-50">
+              We combine business opportunities with customer expectations to
+              design, transform and deliver useful products, and unique brand
+              experiences.
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr class="d-none d-md-block" />
+    </div>
+    <div class="container mb-3 pb-3 mb-md-5 pb-md-5">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12 col-md-6">
+          <img
+            class="w-100 mb-5 mb-md-0"
+            src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/business-imgg.png"
+          />
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="mb-4">
+            <h1 class="mb-5 text-start fw-semibold">
+              We’re building business for <br />
+              your digital economy
+            </h1>
+            <p class="text-black-50">
+              We are building business, banking products and services to support
+              the next generation of entrepreneurs. The world as we know it is
+              no longer the same, and changes now occur in days and months, not
+              years. Get started!
+            </p>
+          </div>
+          <div class="row mb-5">
+            <div class="col-6">
+              <h1 class="display-4 text-success fw-bold">120k</h1>
+              <h6 class="fw-semibold">Business Consultants</h6>
+            </div>
+            <div class="col-6">
+              <h1 class="display-4 text-success fw-bold">370+</h1>
+              <h6 class="fw-semibold">Startups in 2023</h6>
+            </div>
+          </div>
+          <button class="btn btn-primary px-5 py-3 me-4">Get Started</button>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="container-fuild mx-4" style="background-color: #f6f6f6">
+      <div class="container mb-5 py-5">
+        <div class="row justify-content-center mb-5">
+          <div class="col-12 col-md-9 text-center">
+            <span class="text-uppercase text-primary">
+              helping entrepreneurs make more money
+            </span>
+            <h1 class="mb-5 mt-3 display-5 text-center fw-semibold">
+              Unlimited cash back, zero fees, <br />
+              no credit check
+            </h1>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 col-md-5">
+            <div class="">
+              <h5 class="mb-3">Strategy & Business</h5>
+              <p>
+                We design business models and growth strategies to be effective
+                and competitive.
+              </p>
+            </div>
+          </div>
+          <div class="col-12 col-md-7"></div>
+        </div>
+      </div>
+    </div> -->
+    <div class="container-fluid" style="background-color: #f6f6f6">
+      <div class="container mb-5 py-5">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h3 class="fw-semibold mb-4 display-5">
+              Develop your next business today
+            </h3>
+            <p class="text-black-50 mb-3 mb-md-5">
+              We design new concepts, prototypes and processes for the next
+              <br />
+              generation of services and experiences, ready for the market.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center align-items-center">
+          <div class="col-12 col-md-5 me-auto">
+            <div class="row gap-4 mb-5 gap-md-0 mb-md-0 row-cols-md-2">
+              <div class="col mt-md-4">
+                <div class="card service-card border-0 bg-white shadow p-4">
+                  <div
+                    class="card-body text-center d-flex justify-content-center align-items-center flex-column"
+                  >
+                    <div class="text-center mb-3">
+                      <div
+                        class="elementor-icon rounded-circle"
+                        style="padding: 23px; background-color: #4c6fff2e"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M21.2099 15.8901C20.5737 17.3946 19.5787 18.7203 18.3118 19.7514C17.0449 20.7825 15.5447 21.4875 13.9424 21.8049C12.34 22.1222 10.6843 22.0422 9.12006 21.5719C7.55578 21.1015 6.13054 20.2551 4.96893 19.1067C3.80733 17.9583 2.94473 16.5428 2.45655 14.984C1.96837 13.4252 1.86948 11.7706 2.16851 10.1647C2.46755 8.55886 3.15541 7.05071 4.17196 5.77211C5.18851 4.49351 6.5028 3.4834 7.99992 2.83008"
+                            stroke="#4C6FFF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2V12H22Z"
+                            stroke="#4C6FFF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <h5>Business Agility & Innovation</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col mt-md-5">
+                <div class="card service-card border-0 bg-white shadow p-4">
+                  <div
+                    class="card-body text-center d-flex justify-content-center align-items-center flex-column"
+                  >
+                    <div class="text-center mb-3">
+                      <div
+                        class="elementor-icon rounded-circle"
+                        style="padding: 23px; background-color: #4c6fff2e"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M21.2099 15.8901C20.5737 17.3946 19.5787 18.7203 18.3118 19.7514C17.0449 20.7825 15.5447 21.4875 13.9424 21.8049C12.34 22.1222 10.6843 22.0422 9.12006 21.5719C7.55578 21.1015 6.13054 20.2551 4.96893 19.1067C3.80733 17.9583 2.94473 16.5428 2.45655 14.984C1.96837 13.4252 1.86948 11.7706 2.16851 10.1647C2.46755 8.55886 3.15541 7.05071 4.17196 5.77211C5.18851 4.49351 6.5028 3.4834 7.99992 2.83008"
+                            stroke="#4C6FFF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2V12H22Z"
+                            stroke="#4C6FFF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <h5>Strategic Goal Definition</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col mt-md-1">
+                <div class="card service-card border-0 bg-white shadow p-4">
+                  <div
+                    class="card-body text-center d-flex justify-content-center align-items-center flex-column"
+                  >
+                    <div class="text-center mb-3">
+                      <div
+                        class="elementor-icon rounded-circle"
+                        style="padding: 23px; background-color: #4c6fff2e"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M21.2099 15.8901C20.5737 17.3946 19.5787 18.7203 18.3118 19.7514C17.0449 20.7825 15.5447 21.4875 13.9424 21.8049C12.34 22.1222 10.6843 22.0422 9.12006 21.5719C7.55578 21.1015 6.13054 20.2551 4.96893 19.1067C3.80733 17.9583 2.94473 16.5428 2.45655 14.984C1.96837 13.4252 1.86948 11.7706 2.16851 10.1647C2.46755 8.55886 3.15541 7.05071 4.17196 5.77211C5.18851 4.49351 6.5028 3.4834 7.99992 2.83008"
+                            stroke="#4C6FFF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2V12H22Z"
+                            stroke="#4C6FFF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <h5>Action Roadmap Definition</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="col mt-md-4">
+                <div class="card service-card border-0 bg-white shadow p-4">
+                  <div
+                    class="card-body text-center d-flex justify-content-center align-items-center flex-column"
+                  >
+                    <div class="text-center mb-3">
+                      <div
+                        class="elementor-icon rounded-circle"
+                        style="padding: 23px; background-color: #4c6fff2e"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <path
+                            d="M21.2099 15.8901C20.5737 17.3946 19.5787 18.7203 18.3118 19.7514C17.0449 20.7825 15.5447 21.4875 13.9424 21.8049C12.34 22.1222 10.6843 22.0422 9.12006 21.5719C7.55578 21.1015 6.13054 20.2551 4.96893 19.1067C3.80733 17.9583 2.94473 16.5428 2.45655 14.984C1.96837 13.4252 1.86948 11.7706 2.16851 10.1647C2.46755 8.55886 3.15541 7.05071 4.17196 5.77211C5.18851 4.49351 6.5028 3.4834 7.99992 2.83008"
+                            stroke="#4C6FFF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                          <path
+                            d="M22 12C22 10.6868 21.7413 9.38642 21.2388 8.17317C20.7362 6.95991 19.9997 5.85752 19.0711 4.92893C18.1425 4.00035 17.0401 3.26375 15.8268 2.7612C14.6136 2.25866 13.3132 2 12 2V12H22Z"
+                            stroke="#4C6FFF"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </div>
+                    <h5>Business Model Analysis</h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <h1 class="mb-5 text-start fw-semibold">
+              Strategies that get you on
+              <br />
+              the path to success
+            </h1>
+            <p class="text-black-50">
+              Through an in-depth knowledge of all industrial sectors and the
+              application of approaches such as Lean Strategy, and Business
+              Design, we prepare organisations to welcome change, to be ready to
+              evolve rapidly while remaining competitive in the market.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container py-3 py-md-5">
+      <h5 class="fw-semibold mb-5 text-center">
+        Trusted by nearly 5000+ customers & startups
+      </h5>
+      <div class="row mb-3 mb-md-5 row-cols-3 row-cols-md-5 pb-md-5">
+        <div class="col text-center">
+          <img
+            src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/1.png"
+            height="35px"
+          />
+        </div>
+        <div class="col text-center">
+          <img
+            src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/2.png"
+            height="35px"
+          />
+        </div>
+        <div class="col text-center">
+          <img
+            src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/3.png"
+            height="35px"
+          />
+        </div>
+        <div class="col text-center">
+          <img
+            src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/4.png"
+            height="35px"
+          />
+        </div>
+        <div class="col text-center">
+          <img
+            src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/5.png"
+            height="35px"
+          />
+        </div>
+      </div>
+      <hr class="d-none d-md-block" />
+    </div>
+    <div class="container py-5">
+      <div class="mb-5">
+        <h3 class="fw-semibold mb-5 display-5 text-center">
+          Plan for big expenses, manage profits, <br />
+          vendors, and much more
+        </h3>
+        <p class="text-center text-black-50" style="font-size: 17px">
+          We work with organizations of all sizes, from early start-ups
+          <br />
+          global brands, in the private, public, and social sector.
+        </p>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary px-5 py-3">Get Started</button>
+      </div>
+    </div>
+    <footer class="footer-bg">
+      <div class="container pt-5">
+        <div class="row text-white mb-4">
+          <div class="col-12 col-md-3">
+            <h5 class="mb-4">About us</h5>
+            <p>
+              Onlynx Tech have the experienced team about the travel technology
+              and digital marketing. We will be able to serve your business.
+            </p>
+          </div>
+          <div class="col-12 col-md-3">
+            <h5 class="mb-4">Location</h5>
+            <p class="mb-3">
+              <b> Office Address </b>
+              <br />
+              21/91, Soi Soonvijai, Rama 09 Road, Bangkapi, Huai Khwang, Royal
+              City Avenue (RCA) Bangkok, Thailand 10310
+            </p>
+            <p class="mb-4">
+              <b> Document Address </b>
+              <br />
+              111/122 Sukhapiban5-27 St., klongthanon, Saimai, Bangkok, Thailand
+              10220
+            </p>
+          </div>
+          <div class="col-12 col-md-3">
+            <h5 class="mb-4">Find us</h5>
+            <p>
+              Email :
+              <a
+                class="text-white text-decoration-none"
+                href="mailto:info@onlynx.tech"
+                >info@onlynx.tech</a
+              >
+              <br />
+              Tel. :
+              <a class="text-white text-decoration-none" href="tel:+66854845381"
+                >+6685 484 5381</a
+              >
+              <br />
+              Line. :
+              <a
+                class="text-white text-decoration-none"
+                href="https://lin.ee/A0zQYzy"
+                target="_blank"
+                >Click to Add Freind</a
+              >
+            </p>
+          </div>
+          <div class="col-12 col-md-3">
+            <a
+              href="https://www.facebook.com/OnlynxTech"
+              target="_blank"
+              class="text-decoration-none me-2"
+            >
+              <img
+                height="50"
+                src="https://www.onlynx.co.th/wp-content/uploads/2020/04/facebook_logos_PNG19750-150x150.png"
+                alt="FB"
+              />
+            </a>
+            <a
+              href="https://line.me/R/ti/p/%40511woqgg"
+              target="_blank"
+              class="text-decoration-none"
+            >
+              <img
+                height="50"
+                src="https://www.onlynx.co.th/wp-content/uploads/2020/04/300px-LINE_logo.svg_-150x150.png"
+                alt="LINE"
+              />
+            </a>
+          </div>
+        </div>
+        <div class="border-top border-secondary text-white py-4">
+          <span> Copyright © 2024 Onlynx Tech </span>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
