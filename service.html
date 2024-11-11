@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    .home-banner {
+      /* background-image: url("https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/business-hero.jpeg"); */
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 5rem;
+      background-color: #f6f6f6;
+    }
+
+    .home-banner .container .row {
+      min-height: 450px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 50px;
+      height: 24px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    input:checked+.slider {
+      background-color: #2196f3;
+    }
+
+    input:focus+.slider {
+      box-shadow: 0 0 1px #2196f3;
+    }
+
+    input:checked+.slider:before {
+      -webkit-transform: translateX(26px);
+      -ms-transform: translateX(26px);
+      transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+    .slider.round {
+      border-radius: 34px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
+    .footer-bg {
+      background-color: #f5f5f5;
+    }
+
+    .service-icon {
+      background-color: #fff9e7;
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .service-card {
+      border-radius: 10px;
+      transition: all 0.3s;
+    }
+
+    .service-card:hover {
+      border-color: transparent;
+      box-shadow: 0 20px 40px 0 rgba(87, 90, 100, 0.15);
+    }
+
+    /* #accordionExample .accordion-button {
+      border: 0px !important;
+    }
+
+    .accordion-item:not(:first-of-type) {
+      border-top: 1px solid black;
+    } */
+
+    .accordion-button::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
+      transition: all 0.5s;
+      margin-left: unset;
+      margin-right: 10px;
+    }
+
+    .accordion-button:not(.collapsed)::after {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='currentColor' class='bi bi-dash' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
+    }
+
+    .accordion-button::after {
+      transition: all 0.5s;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-white sticky-top">
+    <div class="container py-2">
+      <a class="navbar-brand fw-bold text-uppercase" href="#">
+        <img height="30" src="https://www.onlynx.co.th/wp-content/uploads/2020/03/cropped-logo-Onlynx-tech2.png"
+          alt="Onlynx" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto gap-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pages</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid home-banner">
+    <div class="container">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-12">
+          <h1 class="display-3 fw-semibold text-center mb-5">Services</h1>
+          <div class="d-flex justify-content-center align-items-center">
+            <nav
+              style="--bs-breadcrumb-divider: url(&#34;data:image/svg + xml,%3Csvgxmlns='http://www.w3.org/2000/svg'width='8'height='8'%3E%3Cpathd='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z'fill='%236c757d'/%3E%3C/svg%3E&#34;);"
+              aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">
+                  Library
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+        <!-- <div class="col-12 col-md-6">
+            <div class="mb-5">
+              <h1 class="display-3 fw-semibold mb-4">
+                Designing your <br />
+                next business.
+              </h1>
+              <p class="text-black-50">
+                Small business, big opportunity? We help our clients exploit
+                technology to strategically reshape their business around
+                digital economy.
+              </p>
+            </div>
+            <button class="btn btn-primary px-5 py-3 me-4 md-4 mb-md-0">
+              Discover Now
+            </button>
+            <button class="btn btn-outline-primary px-5 py-3">
+              How it Works
+            </button>
+          </div>
+          <div class="col-12 col-md-6"></div> -->
+      </div>
+    </div>
+  </div>
+  <div class="container mb-md-5 pb-md-5">
+    <div class="row justify-content-center mb-5">
+      <div class="col-12 col-md-9 text-center">
+        <h6 class="text-uppercase text-primary fw-light">
+          We work mainly with digital agencies and software companies
+        </h6>
+        <h1 class="mb-3 mb-md-5 display-5 fw-semibold">
+          Outstanding software and <br />
+          services that solve your hassle
+        </h1>
+      </div>
+    </div>
+    <div class="row mb-5 pb-5">
+      <div class="col-12 col-md-4">
+        <div class="service-card card p-4">
+          <div class="card-body py-4">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="22" viewBox="0 0 28 22" fill="none">
+                <path d="M0 6.41663H27.5V22H0V6.41663Z" fill="#F9C45C"></path>
+                <path
+                  d="M0 0V4.58333H27.5V0H0ZM2.75 3.20833C2.5687 3.20833 2.39147 3.15457 2.24073 3.05385C2.08998 2.95312 1.97249 2.80996 1.90311 2.64246C1.83373 2.47496 1.81558 2.29065 1.85095 2.11283C1.88632 1.93502 1.97362 1.77168 2.10182 1.64349C2.23002 1.51529 2.39335 1.42798 2.57117 1.39261C2.74898 1.35724 2.93329 1.3754 3.10079 1.44478C3.26829 1.51416 3.41146 1.63165 3.51218 1.78239C3.61291 1.93314 3.66667 2.11037 3.66667 2.29167C3.66667 2.53478 3.57009 2.76794 3.39818 2.93985C3.22627 3.11176 2.99312 3.20833 2.75 3.20833ZM5.5 3.20833C5.3187 3.20833 5.14147 3.15457 4.99073 3.05385C4.83998 2.95312 4.72249 2.80996 4.65311 2.64246C4.58373 2.47496 4.56558 2.29065 4.60095 2.11283C4.63632 1.93502 4.72362 1.77168 4.85182 1.64349C4.98002 1.51529 5.14335 1.42798 5.32117 1.39261C5.49898 1.35724 5.68329 1.3754 5.85079 1.44478C6.01829 1.51416 6.16146 1.63165 6.26218 1.78239C6.36291 1.93314 6.41667 2.11037 6.41667 2.29167C6.41667 2.53478 6.32009 2.76794 6.14818 2.93985C5.97627 3.11176 5.74312 3.20833 5.5 3.20833ZM8.25 3.20833C8.0687 3.20833 7.89147 3.15457 7.74073 3.05385C7.58998 2.95312 7.47249 2.80996 7.40311 2.64246C7.33373 2.47496 7.31558 2.29065 7.35095 2.11283C7.38632 1.93502 7.47362 1.77168 7.60182 1.64349C7.73002 1.51529 7.89335 1.42798 8.07117 1.39261C8.24898 1.35724 8.43329 1.3754 8.60079 1.44478C8.76829 1.51416 8.91146 1.63165 9.01218 1.78239C9.11291 1.93314 9.16667 2.11037 9.16667 2.29167C9.16667 2.53478 9.07009 2.76794 8.89818 2.93985C8.72627 3.11176 8.49312 3.20833 8.25 3.20833Z"
+                  fill="#F9C45C"></path>
+              </svg>
+            </div>
+
+            <h5 class="mb-3 fw-semibold">Technology Services</h5>
+            <h6 class="text-black-50 mb-0 pb-0 fw-light">
+              Together we transform your business from the people to the
+              processes.
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="service-card card p-4">
+          <div class="card-body py-4">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" fill="none">
+                <path
+                  d="M18.7412 13.8517C22.3413 13.8517 25.2597 10.9333 25.2597 7.33322C25.2597 3.73314 22.3413 0.814697 18.7412 0.814697C15.1411 0.814697 12.2227 3.73314 12.2227 7.33322C12.2227 10.9333 15.1411 13.8517 18.7412 13.8517Z"
+                  fill="#6AC75A"></path>
+                <path
+                  d="M8.14818 22C9.0482 22 9.77781 21.2704 9.77781 20.3704C9.77781 19.4703 9.0482 18.7407 8.14818 18.7407C7.24816 18.7407 6.51855 19.4703 6.51855 20.3704C6.51855 21.2704 7.24816 22 8.14818 22Z"
+                  fill="#6AC75A"></path>
+                <path
+                  d="M18.741 22C19.641 22 20.3706 21.2704 20.3706 20.3704C20.3706 19.4703 19.641 18.7407 18.741 18.7407C17.8409 18.7407 17.1113 19.4703 17.1113 20.3704C17.1113 21.2704 17.8409 22 18.741 22Z"
+                  fill="#6AC75A"></path>
+                <path
+                  d="M10.5926 7.33333H6.43704L4.84815 0.611111C4.80365 0.438646 4.70387 0.285512 4.56407 0.175145C4.42427 0.0647775 4.25216 0.00325752 4.07407 0H0.814815C0.598713 0 0.391461 0.0858463 0.238654 0.238654C0.0858463 0.391461 0 0.598713 0 0.814815C0 1.03092 0.0858463 1.23817 0.238654 1.39098C0.391461 1.54378 0.598713 1.62963 0.814815 1.62963H3.42222L7.08889 17.1111H20.5333L21.1852 15.1148C19.9641 15.4988 18.6697 15.5898 17.4068 15.3802C16.144 15.1706 14.9484 14.6665 13.9167 13.9087C12.8851 13.1508 12.0466 12.1606 11.469 11.0182C10.8915 9.8758 10.5912 8.61341 10.5926 7.33333Z"
+                  fill="#6AC75A"></path>
+              </svg>
+            </div>
+
+            <h5 class="mb-3 fw-semibold">Operational Excellence</h5>
+            <h6 class="text-black-50 mb-0 pb-0 fw-light">
+              Together we transform your business from the people to the
+              processes.
+            </h6>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-4">
+        <div class="service-card card p-4">
+          <div class="card-body py-4">
+            <div class="service-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="22" viewBox="0 0 27 22" fill="none">
+                <path
+                  d="M23.8068 6.17214V0C19.9248 2.7326 15.326 4.26553 10.5808 4.40867H7.05388V13.226C7.05388 15.9153 7.05388 20.0154 12.0357 21.9993H12.3443C12.5571 22.0079 12.7657 21.9391 12.9318 21.8058C13.0978 21.6725 13.21 21.4836 13.2476 21.274C13.2852 21.0644 13.2457 20.8483 13.1364 20.6656C13.0271 20.4829 12.8554 20.3459 12.6529 20.2799C8.81735 18.781 8.81735 15.8271 8.81735 13.226H10.5808C15.3483 13.2386 19.9853 14.7843 23.8068 17.6347V11.4626C24.5084 11.4626 25.1812 11.1839 25.6773 10.6878C26.1734 10.1917 26.452 9.5189 26.452 8.81735C26.452 8.1158 26.1734 7.44298 25.6773 6.94691C25.1812 6.45083 24.5084 6.17214 23.8068 6.17214ZM0 7.05388V10.5808C0 11.2824 0.27869 11.9552 0.774762 12.4513C1.27083 12.9473 1.94365 13.226 2.6452 13.226H5.29041V4.40867H2.6452C1.94365 4.40867 1.27083 4.68736 0.774762 5.18344C0.27869 5.67951 0 6.35233 0 7.05388Z"
+                  fill="#4C6FFF"></path>
+              </svg>
+            </div>
+
+            <h5 class="mb-3 fw-semibold">Business Consulting</h5>
+            <h6 class="text-black-50 mb-0 pb-0 fw-light">
+              Together we transform your business from the people to the
+              processes.
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mb-5">
+      <div class="col-12 col-md-3">
+        <div class="card border-0 rounded-0 px-3" style="background-color: #e1fcdc">
+          <div class="card-body d-flex justify-content-around py-4 align-items-center">
+            <h2 class="display-3 fw-semibold mb-0">50k</h2>
+            <div class="fw-medium mt-2">Total Users</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card border-0 rounded-0 px-3" style="background-color: #e3e8ff">
+          <div class="card-body d-flex justify-content-around py-4 align-items-center">
+            <h2 class="display-3 fw-semibold mb-0">32k</h2>
+            <div class="fw-medium mb-0 mt-2">Downloads</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card border-0 rounded-0 px-3" style="background-color: #ffedef">
+          <div class="card-body d-flex justify-content-around py-4 align-items-center">
+            <h2 class="display-3 fw-semibold mb-0">90k</h2>
+            <div class="fw-medium mb-0 mt-2">Social Likes</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-3">
+        <div class="card border-0 rounded-0 px-3" style="background-color: #fff9e6">
+          <div class="card-body d-flex justify-content-around py-4 align-items-center">
+            <h2 class="display-3 fw-semibold mb-0">25k</h2>
+            <div class="fw-medium mb-0 mt-2">Subscribers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="mx-auto" style="background-color: #f8fafc; max-width: 80%;">
+    <div class="container mb-5 py-5">
+      <div class="row justify-items-center align-items-center" style="min-height: 600px;">
+        <div class="col-12 text-center mb-5 mt-auto">
+          <h3 class="fw-semibold mb-5 display-5">
+            What our customers are saying
+          </h3>
+        </div>
+        <div class="col-12 mb-auto">
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card rounded-5 p-4">
+                  <div
+                    class="card-header d-flex justify-content-start gap-3 align-items-center border-0 bg-transparent">
+                    <div>
+                      <img class="rounded-circle" height="70px"
+                        src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/avatar-2-150x150.png"
+                        :alt="customer">
+                    </div>
+                    <div>
+                      <h5 class="mb-1">Stella Smith</h5>
+                      <h6 class="text-secondary mb-1 fw-light">Engineer at Unify</h6>
+                      <div>
+                        <svg width="95" height="13" viewBox="0 0 95 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.82 12.78L6.68 10.7L2.53 12.74L3.23 8.17L0 4.84L4.57 4.1L6.73 0L8.85 4.12L13.42 4.9L10.16 8.2L10.82 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M31.2099 12.78L27.0699 10.7L22.9099 12.74L23.6199 8.17L20.3899 4.84L24.9599 4.1L27.1199 0L29.2399 4.12L33.8099 4.9L30.5499 8.2L31.2099 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M51.59 12.78L47.46 10.7L43.3 12.74L44 8.17L40.77 4.84L45.34 4.1L47.5 0L49.62 4.12L54.19 4.9L50.93 8.2L51.59 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M71.9799 12.78L67.8399 10.7L63.6799 12.74L64.3899 8.17L61.1599 4.84L65.7299 4.1L67.8899 0L70.0099 4.12L74.5799 4.9L71.3099 8.2L71.9799 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M92.36 12.78L88.22 10.7L84.07 12.74L84.77 8.17L81.54 4.84L86.11 4.1L88.27 0L90.39 4.12L94.96 4.9L91.7 8.2L92.36 12.78Z"
+                            fill="#FFBB00"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis consectetur quibusdam
+                    voluptatibus. Itaque vel,
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card rounded-5 p-4">
+                  <div
+                    class="card-header d-flex justify-content-start gap-3 align-items-center border-0 bg-transparent">
+                    <div>
+                      <img class="rounded-circle" height="70px"
+                        src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/avatar-2-150x150.png"
+                        :alt="customer">
+                    </div>
+                    <div>
+                      <h5 class="mb-1">Stella Smith</h5>
+                      <h6 class="text-secondary mb-1 fw-light">Engineer at Unify</h6>
+                      <div>
+                        <svg width="95" height="13" viewBox="0 0 95 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.82 12.78L6.68 10.7L2.53 12.74L3.23 8.17L0 4.84L4.57 4.1L6.73 0L8.85 4.12L13.42 4.9L10.16 8.2L10.82 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M31.2099 12.78L27.0699 10.7L22.9099 12.74L23.6199 8.17L20.3899 4.84L24.9599 4.1L27.1199 0L29.2399 4.12L33.8099 4.9L30.5499 8.2L31.2099 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M51.59 12.78L47.46 10.7L43.3 12.74L44 8.17L40.77 4.84L45.34 4.1L47.5 0L49.62 4.12L54.19 4.9L50.93 8.2L51.59 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M71.9799 12.78L67.8399 10.7L63.6799 12.74L64.3899 8.17L61.1599 4.84L65.7299 4.1L67.8899 0L70.0099 4.12L74.5799 4.9L71.3099 8.2L71.9799 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M92.36 12.78L88.22 10.7L84.07 12.74L84.77 8.17L81.54 4.84L86.11 4.1L88.27 0L90.39 4.12L94.96 4.9L91.7 8.2L92.36 12.78Z"
+                            fill="#FFBB00"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis consectetur quibusdam
+                    voluptatibus. Itaque vel,
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card rounded-5 p-4">
+                  <div
+                    class="card-header d-flex justify-content-start gap-3 align-items-center border-0 bg-transparent">
+                    <div>
+                      <img class="rounded-circle" height="70px"
+                        src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/avatar-2-150x150.png"
+                        :alt="customer">
+                    </div>
+                    <div>
+                      <h5 class="mb-1">Stella Smith</h5>
+                      <h6 class="text-secondary mb-1 fw-light">Engineer at Unify</h6>
+                      <div>
+                        <svg width="95" height="13" viewBox="0 0 95 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.82 12.78L6.68 10.7L2.53 12.74L3.23 8.17L0 4.84L4.57 4.1L6.73 0L8.85 4.12L13.42 4.9L10.16 8.2L10.82 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M31.2099 12.78L27.0699 10.7L22.9099 12.74L23.6199 8.17L20.3899 4.84L24.9599 4.1L27.1199 0L29.2399 4.12L33.8099 4.9L30.5499 8.2L31.2099 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M51.59 12.78L47.46 10.7L43.3 12.74L44 8.17L40.77 4.84L45.34 4.1L47.5 0L49.62 4.12L54.19 4.9L50.93 8.2L51.59 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M71.9799 12.78L67.8399 10.7L63.6799 12.74L64.3899 8.17L61.1599 4.84L65.7299 4.1L67.8899 0L70.0099 4.12L74.5799 4.9L71.3099 8.2L71.9799 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M92.36 12.78L88.22 10.7L84.07 12.74L84.77 8.17L81.54 4.84L86.11 4.1L88.27 0L90.39 4.12L94.96 4.9L91.7 8.2L92.36 12.78Z"
+                            fill="#FFBB00"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis consectetur quibusdam
+                    voluptatibus. Itaque vel,
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card rounded-5 p-4">
+                  <div
+                    class="card-header d-flex justify-content-start gap-3 align-items-center border-0 bg-transparent">
+                    <div>
+                      <img class="rounded-circle" height="70px"
+                        src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/avatar-2-150x150.png"
+                        :alt="customer">
+                    </div>
+                    <div>
+                      <h5 class="mb-1">Stella Smith</h5>
+                      <h6 class="text-secondary mb-1 fw-light">Engineer at Unify</h6>
+                      <div>
+                        <svg width="95" height="13" viewBox="0 0 95 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.82 12.78L6.68 10.7L2.53 12.74L3.23 8.17L0 4.84L4.57 4.1L6.73 0L8.85 4.12L13.42 4.9L10.16 8.2L10.82 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M31.2099 12.78L27.0699 10.7L22.9099 12.74L23.6199 8.17L20.3899 4.84L24.9599 4.1L27.1199 0L29.2399 4.12L33.8099 4.9L30.5499 8.2L31.2099 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M51.59 12.78L47.46 10.7L43.3 12.74L44 8.17L40.77 4.84L45.34 4.1L47.5 0L49.62 4.12L54.19 4.9L50.93 8.2L51.59 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M71.9799 12.78L67.8399 10.7L63.6799 12.74L64.3899 8.17L61.1599 4.84L65.7299 4.1L67.8899 0L70.0099 4.12L74.5799 4.9L71.3099 8.2L71.9799 12.78Z"
+                            fill="#FFBB00"></path>
+                          <path
+                            d="M92.36 12.78L88.22 10.7L84.07 12.74L84.77 8.17L81.54 4.84L86.11 4.1L88.27 0L90.39 4.12L94.96 4.9L91.7 8.2L92.36 12.78Z"
+                            fill="#FFBB00"></path>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione nobis consectetur quibusdam
+                    voluptatibus. Itaque vel,
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex justify-content-between align-items-end mb-5">
+          <div>
+            <h1 class="mb-3">
+              Frequently asked questions
+            </h1>
+            <p class="text-black-50 mb-0 pb-0">
+              We hope this section will help you better understand the issues related to software
+            </p>
+          </div>
+          <div>
+            <button class="btn btn-primary px-5 py-3 me-4 md-4 mb-md-0">
+              Contact Us
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-12">
+        <div class="row row-cols-2 mb-5">
+          <div class="accordion mb-4" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed flex-row-reverse" style="justify-content: flex-end;"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true"
+                  aria-controls="collapseOne">
+                  <h5 class="mb-0">
+                    What do I need know before contacting you?
+                  </h5>
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <h6 class="text-black-50 ps-4 ms-1">
+                    The most important thing to know is what do you want to accomplish. Why do I need this software?
+                    What
+                    for? What should it do? Having a clear vision in mind is crucial when ordering a software
+                    application.
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion mb-4" id="accordionExampleTwo">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed flex-row-reverse" style="justify-content: flex-end;"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true"
+                  aria-controls="collapseTwo">
+                  <h5 class="mb-0">
+                    What do I need know before contacting you?
+                  </h5>
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExampleTwo">
+                <div class="accordion-body">
+                  <h6 class="text-black-50 ps-4 ms-1">
+                    The most important thing to know is what do you want to accomplish. Why do I need this software?
+                    What
+                    for? What should it do? Having a clear vision in mind is crucial when ordering a software
+                    application.
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion mb-4" id="accordionExampleThree">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed flex-row-reverse" style="justify-content: flex-end;"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true"
+                  aria-controls="collapseThree">
+                  <h5 class="mb-0">
+                    What do I need know before contacting you?
+                  </h5>
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExampleThree">
+                <div class="accordion-body">
+                  <h6 class="text-black-50 ps-4 ms-1">
+                    The most important thing to know is what do you want to accomplish. Why do I need this software?
+                    What
+                    for? What should it do? Having a clear vision in mind is crucial when ordering a software
+                    application.
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion mb-4" id="accordionExampleFour">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed flex-row-reverse" style="justify-content: flex-end;"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true"
+                  aria-controls="collapseFour">
+                  <h5 class="mb-0">
+                    What do I need know before contacting you?
+                  </h5>
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExampleFour">
+                <div class="accordion-body">
+                  <h6 class="text-black-50 ps-4 ms-1">
+                    The most important thing to know is what do you want to accomplish. Why do I need this software?
+                    What
+                    for? What should it do? Having a clear vision in mind is crucial when ordering a software
+                    application.
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion mb-4" id="accordionExampleFive">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed flex-row-reverse" style="justify-content: flex-end;"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true"
+                  aria-controls="collapseFive">
+                  <h5 class="mb-0">
+                    What do I need know before contacting you?
+                  </h5>
+                </button>
+              </h2>
+              <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExampleFive">
+                <div class="accordion-body">
+                  <h6 class="text-black-50 ps-4 ms-1">
+                    The most important thing to know is what do you want to accomplish. Why do I need this software?
+                    What
+                    for? What should it do? Having a clear vision in mind is crucial when ordering a software
+                    application.
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion mb-4" id="accordionExampleSix">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed flex-row-reverse" style="justify-content: flex-end;"
+                  type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="true"
+                  aria-controls="collapseSix">
+                  <h5 class="mb-0">
+                    What do I need know before contacting you?
+                  </h5>
+                </button>
+              </h2>
+              <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExampleSix">
+                <div class="accordion-body">
+                  <h6 class="text-black-50 ps-4 ms-1">
+                    The most important thing to know is what do you want to accomplish. Why do I need this software?
+                    What
+                    for? What should it do? Having a clear vision in mind is crucial when ordering a software
+                    application.
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="background-color: #f8fafc;">
+    <div class="row mb-3 mb-md-5 row-cols-3 row-cols-md-5 py-5 justify-content-center align-items-center">
+      <div class="col text-center">
+        <img src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/1.png" height="35px" />
+      </div>
+      <div class="col text-center">
+        <img src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/2.png" height="35px" />
+      </div>
+      <div class="col text-center">
+        <img src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/3.png" height="35px" />
+      </div>
+      <div class="col text-center">
+        <img src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/4.png" height="35px" />
+      </div>
+      <div class="col text-center">
+        <img src="https://preview.codeless.co/converta/default/wp-content/uploads/2023/02/5.png" height="35px" />
+      </div>
+    </div>
+  </div>
+  <footer class="footer-bg">
+    <div class="container pt-5">
+      <div class="row mb-4">
+        <div class="col-12 col-md-6">
+          <div class="mb-4">
+            <img height="30" src="https://www.onlynx.co.th/wp-content/uploads/2020/03/cropped-logo-Onlynx-tech2.png"
+              alt="Onlynx" />
+          </div>
+          <p class="text-black-50">
+            Onlynx Tech have the experienced team about the travel technology
+            and digital marketing. We will be able to serve your business.
+          </p>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="row row-cols-3">
+
+          </div>
+        </div>
+        <!-- <div class="col-12 col-md-3">
+          <h5 class="mb-4">Location</h5>
+          <p class="mb-3">
+            <b> Office Address </b>
+            <br />
+            21/91, Soi Soonvijai, Rama 09 Road, Bangkapi, Huai Khwang, Royal
+            City Avenue (RCA) Bangkok, Thailand 10310
+          </p>
+          <p class="mb-4">
+            <b> Document Address </b>
+            <br />
+            111/122 Sukhapiban5-27 St., klongthanon, Saimai, Bangkok, Thailand
+            10220
+          </p>
+        </div>
+        <div class="col-12 col-md-3">
+          <h5 class="mb-4">Find us</h5>
+          <p>
+            Email :
+            <a class="text-white text-decoration-none" href="mailto:info@onlynx.tech">info@onlynx.tech</a>
+            <br />
+            Tel. :
+            <a class="text-white text-decoration-none" href="tel:+66854845381">+6685 484 5381</a>
+            <br />
+            Line. :
+            <a class="text-white text-decoration-none" href="https://lin.ee/A0zQYzy" target="_blank">Click to Add
+              Freind</a>
+          </p>
+        </div>
+        <div class="col-12 col-md-3">
+          <a href="https://www.facebook.com/OnlynxTech" target="_blank" class="text-decoration-none me-2">
+            <img height="50"
+              src="https://www.onlynx.co.th/wp-content/uploads/2020/04/facebook_logos_PNG19750-150x150.png" alt="FB" />
+          </a>
+          <a href="https://line.me/R/ti/p/%40511woqgg" target="_blank" class="text-decoration-none">
+            <img height="50" src="https://www.onlynx.co.th/wp-content/uploads/2020/04/300px-LINE_logo.svg_-150x150.png"
+              alt="LINE" />
+          </a>
+        </div> -->
+      </div>
+      <div class="py-4">
+        <span> Copyright © 2024 Onlynx Tech </span>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: false,
+      loop: false
+    });
+  </script>
+</body>
+
+</html>
